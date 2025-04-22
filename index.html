@@ -3,163 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shen Task 1</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Swiper.js CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Swiper.js JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <style>
-
-    .custom-bg {
-      background: linear-gradient(180deg, #4B0082 0%, #1E1E2F 100%);
-    }
-
-    .swiper {
-      width: 100%;
-      height: 100vh;
-    }
-
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-    }
-
-    .leaf {
-      position: absolute;
-      z-index: 0;
-    }
-    .leaf-1 {
-      top: 10%;
-      left: 5%;
-      color: #FF69B4;
-    }
-    .leaf-2 {
-      top: 20%;
-      right: 5%;
-      color: #FFA500;
-    }
-    .leaf-3 {
-      bottom: 20%;
-      right: 10%;
-      color: #00CED1;
-    }
-    .dots-1 {
-      position: absolute;
-      top: 30%;
-      right: 50%;
-      transform: translateX(50%);
-      color: #FFA500;
-    }
-    .dots-2 {
-      position: absolute;
-      bottom: 30%;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #FFA500;
-    }
-
-    .swiper-pagination-bullet {
-      background: white;
-      opacity: 0.5;
-      width: 12px;
-      height: 12px;
-      margin: 0 8px;
-    }
-    .swiper-pagination-bullet-active {
-      opacity: 1;
-      background: white;
-    }
-
-    .slide-content {
-      text-align: center;
-      z-index: 1;
-    }
-  </style>
+  <title>Shen</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="min-h-screen flex flex-col custom-bg text-white overflow-hidden">
-  <!-- Navbar -->
-  <nav class="flex justify-between items-center p-6 z-10">
-    <div class="text-2xl font-bold">kross</div>
-    <div class="space-x-6">
-      <a href="#" class="hover:text-gray-300">HOME</a>
-      <a href="#" class="hover:text-gray-300">ABOUT</a>
-      <a href="#" class="hover:text-gray-300">BLOG</a>
-      <a href="#" class="hover:text-gray-300">PORTFOLIO</a>
-      <a href="#" class="hover:text-gray-300">CONTACT</a>
+
+<body>
+  <!--Navbar-->
+  <div class="flex justify-center w-screen relative bg-[#41218D] text-white p-10">
+    <div>
+      <img src="/assets/kross.png" alt="Logo" class="w-auto h-auto">
     </div>
-  </nav>
-
-  <!-- Swiper Container -->
-  <div class="swiper mySwiper relative">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <div class="slide-content">
-          <h1 class="text-6xl font-bold">Hi! I'm Shen</h1>
-          <p class="text-4xl mt-4">UX designer</p>
-        </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <div class="slide-content">
-          <h1 class="text-6xl font-bold">Welcome to My Portfolio</h1>
-          <p class="text-4xl mt-4">Explore My Work</p>
-        </div>
-      </div>
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <div class="slide-content">
-          <h1 class="text-6xl font-bold">Let's Collaborate</h1>
-          <p class="text-4xl mt-4">Get in Touch</p>
-        </div>
-      </div>
-      <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <div class="slide-content">
-          <h1 class="text-6xl font-bold">My Latest Projects</h1>
-          <p class="text-4xl mt-4">See What's New</p>
-        </div>
-      </div>
+    <div class="fixed right-60 flex-col justify-around">
+      <a class="p-5" href="#">Home</a>
+      <a class="p-5" href="#">About</a>
+      <a class="p-5" href="#">Blog</a>
+      <a class="p-5" href="#">Portfolio</a>
+      <a class="p-5" href="#">Contact</a>
     </div>
-
-    <!-- Decorative Elements -->
-    <div class="leaf leaf-1 text-9xl">🌸</div>
-    <div class="leaf leaf-2 text-9xl">🍂</div>
-    <div class="leaf leaf-3 text-9xl">🍃</div>
-
-    <!-- Swiper Pagination -->
-    <div class="swiper-pagination absolute bottom-10"></div>
   </div>
-
-  <!-- Social Icons (Left Side) -->
-  <div class="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 p-6 z-10">
-    <a href="#" class="text-2xl hover:text-gray-300">f</a>
-    <a href="#" class="text-2xl hover:text-gray-300">📷</a>
-    <a href="#" class="text-2xl hover:text-gray-300">🌐</a>
-    <a href="#" class="text-2xl hover:text-gray-300">Be</a>
-  </div>
-
-  <!-- Swiper Initialization -->
-  <script>
-    const swiper = new Swiper('.mySwiper', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
-        },
-      },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-    });
-  </script>
 </body>
 </html>
