@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,9 +47,9 @@
     <!-- Desktop Navigation -->
     <div class="hidden md:flex space-x-6">
       <a class="nav-links" href="#">Home</a>
-      <a class="nav-links" href="#">About</a>
-      <a class="nav-links" href="#">Blog</a>
-      <a class="nav-links" href="#">Portfolio</a>
+      <a class="nav-links" href="#about">About</a>
+      <a class="nav-links" href="#blogs">Blog</a>
+      <a class="nav-links" href="#portfolio">Portfolio</a>
       <a class="nav-links" href="#">Contact</a>
     </div>
   </nav>
@@ -66,7 +66,7 @@
   </div>
 
   <!-- Hero Section -->
-  <section class="relative pt-16 bg-[#41218D] overflow-hidden">
+  <section class="relative pt-16 bg-[#41218D] overflow-hidden -mt-15">
     <div class="w-full min-h-screen relative">
       <!-- Background Image -->
       <img src="/assets/bg.png" alt="Background" class="w-full h-full object-cover absolute inset-0">
@@ -104,7 +104,7 @@
   </section>
 
   <!-- Content Section -->
-  <section class="py-16 px-6">
+  <section  id="about" class="py-16 px-6">
     <div class="max-w-4xl mx-auto text-center">
       <p class="text-base md:text-lg mb-8">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia quaerat aliquam, cum aperiam ipsum commodi perspiciatis hic eos dolor accusamus soluta nemo beatae libero fugit quasi dolorum. Ipsa, placeat voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quos temporibus asperiores aperiam et deleniti porro corrupti libero molestias, quod, reprehenderit officiis praesentium labore odio perspiciatis, esse nulla officia fuga.
@@ -350,7 +350,7 @@
   </div>
 
   <!--Portfolio Section-->
-  <div class="max-w-7xl mx-auto">
+  <div id="portfolio" class="max-w-7xl mx-auto">
     <h2 class="font-[Montserrat] font-extrabold text-3xl md:text-5xl pt-3 md:pt-5 text-center mb-6 md:mb-12">Portfolio</h1>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 p-10">
@@ -444,7 +444,7 @@
     </div>
 
     <!-- Testimonials Content -->
-    <h2 class="text-4xl font-bold mb-8 relative">Testimonials</h2>
+    <h2 class="font-bold text-3xl md:text-4xl lg:text-5xl text-center mb-10 font-[Montserrat] relative">Testimonials</h2>
     <div class="max-w-2xl w-full overflow-hidden relative">
         <div id="swiper" class="flex transition-transform duration-300 no-select">
             <!-- Testimonial 1 -->
@@ -503,7 +503,7 @@
     </section>
 
   <!--Company Logos-->
-  <div class="flex w-full mt-10 mb-10 justify-center">
+  <div class="flex w-full mt-10 mb-5 justify-center">
     <div class="flex flex-col md:flex-row md:flex">
       <img src="assets/envato.png" alt="Envato" class="w-40 m-5">
       <img src="assets/sundance.png" alt="Sundance" class="w-40 m-5">
@@ -512,6 +512,105 @@
       <img src="assets/forbes.png" alt="Forbes" class="w-40 m-5">
     </div>
   </div>
+
+  <!--Blogs Section-->
+  <div id="blogs" class="max-w-5xl mx-auto py-16 px-4">
+    <!-- Blogs Heading -->
+    <h2 class="font-bold text-3xl md:text-4xl lg:text-5xl text-center mb-10 font-[Montserrat]">Blogs</h2>
+
+    <!-- Blogs Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Blog Card 1 (Text on Left, Image on Right) -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row col-span-2">
+            <div class="p-8 md:w-2/5 flex flex-col justify-center">
+                <h3 class="text-2xl font-semibold mb-2">Amazon increase income 1.5 Million</h3>
+                <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <span class="inline-block bg-gray-200 text-gray-700 text-sm font-semibold px-3 py-1 rounded-full">E-Commerce</span>
+            </div>
+            <img src="assets/tech.jpg" alt="Blog Image" class="md:w-3/5 h-64 md:h-[35rem] object-cover">
+        </div>
+
+        <!-- Blog Card 2 (Unchanged) -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="assets/icecream.jpg" alt="Blog Image" class="w-full h-64 object-cover">
+            <div class="p-6">
+                <h3 class="text-2xl font-semibold mb-2">Amazon increase income 1.5 Million</h3>
+                <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <span class="inline-block bg-pink-100 text-pink-600 text-sm font-semibold px-3 py-1 rounded-full">Creative</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Info Section with dotted background -->
+    <section class="bg-[url(assets/manydots.png)] py-20">
+      <div class="container mx-auto px-4">
+          <h1 class="text-5xl font-bold text-center mb-16">Contact Info</h1>
+          
+          <!-- Contact Form Card -->
+          <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+              <h2 class="text-2xl text-center mb-8">Contact Form</h2>
+              
+              <form>
+                  <div class="flex flex-col md:flex-row gap-6 mb-8">
+                      <!-- Name Input -->
+                      <div class="flex-1">
+                          <input type="text" placeholder="Full Name" class="w-full border-b border-gray-300 py-2 focus:outline-none">
+                      </div>
+                      
+                      <!-- Email Input -->
+                      <div class="flex-1">
+                          <input type="email" placeholder="Email@example.com" class="w-full border-b border-gray-300 py-2 focus:outline-none">
+                      </div>
+                  </div>
+                  
+                  <!-- Message Input -->
+                  <div class="mb-8">
+                      <input type="text" placeholder="Type message Here" class="w-full border-b border-gray-300 py-2 pb-16 focus:outline-none">
+                  </div>
+                  
+                  <!-- Send Button -->
+                  <div class="text-center">
+                      <button type="submit" class="bg-purple-700 text-white py-3 px-8 rounded w-full md:w-64 uppercase">Send</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </section>
+  
+<!-- Contact Details Section -->
+<section class="bg-gray-900 text-white py-8 md:py-16">
+  <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:justify-between">
+          <!-- Email -->
+          <div class="w-full md:w-1/3 mb-6 md:mb-0 text-center md:text-left">
+              <h3 class="text-gray-400 mb-2 md:mb-3 text-lg font-medium">Email</h3>
+              <p class="text-sm md:text-base">steve.fruits@email.com</p>
+          </div>
+          
+          <!-- Phone -->
+          <div class="w-full md:w-1/3 mb-6 md:mb-0 text-center">
+              <h3 class="text-gray-400 mb-2 md:mb-3 text-lg font-medium">Phone</h3>
+              <p class="text-sm md:text-base">+880 2544 658 256</p>
+          </div>
+          
+          <!-- Address -->
+          <div class="w-full md:w-1/3 text-center md:text-right">
+              <h3 class="text-gray-400 mb-2 md:mb-3 text-lg font-medium">Address</h3>
+              <p class="text-sm md:text-base">125/A, CA Commercial Area,</p>
+              <p class="text-sm md:text-base">California, USA</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 border-t border-gray-800 py-4">
+  <div class="container mx-auto px-4">
+      <p class="text-gray-400 text-center text-xs md:text-sm">© Kross. All Right Reserved 2018.</p>
+  </div>
+</footer>
+
 
   <!--Swiper Script-->
   <script>
