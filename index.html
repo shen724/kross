@@ -7,11 +7,32 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
+
+<style type="text/tailwindcss">
+  @layer components {
+    .socialmedia {
+      @apply flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4 mt-10 md:mt-0 md:absolute md:bottom-20 md:left-6;
+    }
+    .mobile-menu-link{
+      @apply py-3 hover:text-gray-300 transition-colors;
+   }
+    .navbar{
+      @apply flex justify-between items-center w-full bg-[#41218D] text-white p-4 md:px-10 lg:px-20 fixed top-0 z-50
+    }
+    .nav-links{
+      @apply hover:text-gray-300 transition-colors;
+    }
+    .hero-title{
+      @apply text-white text-4xl md:ml-40 lg:ml-50 md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight max-w-lg
+    }
+  }
+</style>
 
 <body class="font-[Montserrat] font-[500]">
   <!-- Navbar -->
-  <nav class="flex justify-between items-center w-full bg-[#41218D] text-white p-4 md:px-10 lg:px-20 fixed top-0 z-50">
+  <nav class="navbar">
     <div class="logo">
       <img src="/assets/kross.png" alt="Logo" class="h-10">
     </div>
@@ -25,22 +46,22 @@
     </div>
     <!-- Desktop Navigation -->
     <div class="hidden md:flex space-x-6">
-      <a class="hover:text-gray-300 transition-colors" href="#">Home</a>
-      <a class="hover:text-gray-300 transition-colors" href="#">About</a>
-      <a class="hover:text-gray-300 transition-colors" href="#">Blog</a>
-      <a class="hover:text-gray-300 transition-colors" href="#">Portfolio</a>
-      <a class="hover:text-gray-300 transition-colors" href="#">Contact</a>
+      <a class="nav-links" href="#">Home</a>
+      <a class="nav-links" href="#">About</a>
+      <a class="nav-links" href="#">Blog</a>
+      <a class="nav-links" href="#">Portfolio</a>
+      <a class="nav-links" href="#">Contact</a>
     </div>
   </nav>
   
   <!-- Mobile menu (hidden by default) -->
   <div id="mobile-menu" class="fixed top-16 right-0 left-0 bg-[#41218D] text-white z-40 hidden">
     <div class="flex flex-col items-center py-4">
-      <a class="py-3 hover:text-gray-300 transition-colors" href="#">Home</a>
-      <a class="py-3 hover:text-gray-300 transition-colors" href="#">About</a>
-      <a class="py-3 hover:text-gray-300 transition-colors" href="#">Blog</a>
-      <a class="py-3 hover:text-gray-300 transition-colors" href="#">Portfolio</a>
-      <a class="py-3 hover:text-gray-300 transition-colors" href="#">Contact</a>
+      <a class="mobile-menu-link" href="#">Home</a>
+      <a class="mobile-menu-link" href="#">About</a>
+      <a class="mobile-menu-link" href="#">Blog</a>
+      <a class="mobile-menu-link" href="#">Portfolio</a>
+      <a class="mobile-menu-link" href="#">Contact</a>
     </div>
   </div>
 
@@ -61,12 +82,12 @@
       
       <!-- Hero Content -->
       <div class="relative z-20 flex flex-col justify-center h-screen px-6 md:px-20">
-        <h1 class="text-white text-4xl md:ml-40 lg:ml-50 md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight max-w-lg">
+        <h1 class="hero-title">
           Hi! I'm<br>Shen Jeuz<br>UX designer
         </h1>
         
         <!-- Social Media -->
-        <div class="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4 mt-10 md:mt-0 md:absolute md:bottom-20 md:left-6">
+        <div class="socialmedia">
           <a href="#" class="hover:opacity-80 transition-opacity">
             <img src="/assets/fb.png" alt="Facebook" class="w-8 h-8">
           </a>
@@ -402,6 +423,211 @@
     
   </div>
 
+  <!--Testimonials Section-->
+
+  <section class="bg-purple-900 relative py-16 px-4 flex flex-col items-center text-white">
+    <!-- Background Image Layer -->
+    <div class="absolute inset-0 bg-cover bg-center bg-[url(/assets/manydots.png)]"></div>
+
+    <!-- Floating Elements (placeholders) -->
+    <div class="absolute top-8 left-8">
+        <img src="/assets/leaf2.png" alt="Leaf" class="w-10 md:w-20 opacity-50">
+    </div>
+    <div class="absolute top-16 right-8">
+        <img src="/assets/dot.png" alt="Leaf" class="w-10 md:w-20">
+    </div>
+    <div class="absolute bottom-16 left-8">
+        <img src="/assets/leaf5.png" alt="Leaf" class="w-20 md:w-40">
+    </div>
+    <div class="absolute bottom-8 right-8">
+        <img src="/assets/leaf.png" alt="Leaf" class="w-30 md:w-40">
+    </div>
+
+    <!-- Testimonials Content -->
+    <h2 class="text-4xl font-bold mb-8 relative">Testimonials</h2>
+    <div class="max-w-2xl w-full overflow-hidden relative">
+        <div id="swiper" class="flex transition-transform duration-300 no-select">
+            <!-- Testimonial 1 -->
+            <div class="min-w-full text-center flex flex-col">
+                <blockquote class="text-lg mb-6 text-center">
+                    <div class="w-full -mb-10">
+                      <span class="text-9xl text-white mr-2">“</span>
+                    </div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </blockquote>
+                <div class="flex flex-col items-center">
+                    <img src="assets/person1.png" alt="Profile Picture" class="w-20 h-20 rounded-full mb-4">
+                    <p class="font-semibold">JESSICA GOMEZ</p>
+                    <p class="text-gray-400">CEO, FOUNDER</p>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="min-w-full text-center flex flex-col">
+                <blockquote class="text-lg mb-6 text-center">
+                    <div class="w-full -mb-10">
+                      <span class="text-9xl text-white mr-2">“</span>
+                    </div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </blockquote>
+                <div class="flex flex-col items-center">
+                    <img src="assets/person2.png" alt="Profile Picture" class="w-20 h-20 rounded-full mb-4">
+                    <p class="font-semibold">JESSICA GOMEZ</p>
+                    <p class="text-gray-400">CEO, FOUNDER</p>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="min-w-full text-center flex flex-col">
+                <blockquote class="text-lg mb-6 text-center">
+                    <div class="w-full -mb-10">
+                      <span class="text-9xl text-white mr-2">“</span>
+                    </div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </blockquote>
+                <div class="flex flex-col items-center">
+                    <img src="assets/person3.png" alt="Profile Picture" class="w-20 h-20 rounded-full mb-4">
+                    <p class="font-semibold">JESSICA GOMEZ</p>
+                    <p class="text-gray-400">CEO, FOUNDER</p>
+                </div>
+            </div>
+        </div>
+        <!-- Pagination Lines -->
+        <div id="pagination" class="flex space-x-2 mt-6 justify-center">
+            <span class="w-6 h-1 bg-white rounded cursor-pointer" data-index="0"></span>
+            <span class="w-6 h-1 bg-gray-400 rounded cursor-pointer" data-index="1"></span>
+            <span class="w-6 h-1 bg-gray-400 rounded cursor-pointer" data-index="2"></span>
+        </div>
+      </div>
+    </section>
+
+  <!--Company Logos-->
+  <div class="flex w-full mt-10 mb-10 justify-center">
+    <div class="flex flex-col md:flex-row md:flex">
+      <img src="assets/envato.png" alt="Envato" class="w-40 m-5">
+      <img src="assets/sundance.png" alt="Sundance" class="w-40 m-5">
+      <img src="assets/slack.png" alt="Slack" class="w-40 m-5">
+      <img src="assets/airbnb.png" alt="AirBNB" class="w-40 m-5">
+      <img src="assets/forbes.png" alt="Forbes" class="w-40 m-5">
+    </div>
+  </div>
+
+  <!--Swiper Script-->
+  <script>
+    const swiper = document.getElementById('swiper');
+    const paginationLines = document.querySelectorAll('#pagination span');
+    let currentIndex = 0;
+    let startX = 0;
+    let isDragging = false;
+    let autoSlideInterval;
+
+    // Total number of slides
+    const totalSlides = paginationLines.length;
+
+    // Update swiper position
+    function updateSwiper() {
+        swiper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        paginationLines.forEach((line, index) => {
+            line.classList.toggle('bg-white', index === currentIndex);
+            line.classList.toggle('bg-gray-400', index !== currentIndex);
+        });
+    }
+
+    // Handle infinite scrolling
+    function handleInfiniteScroll(direction) {
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % totalSlides;
+        } else if (direction === 'prev') {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        }
+        updateSwiper();
+    }
+
+    // Handle line click
+    paginationLines.forEach(line => {
+        line.addEventListener('click', () => {
+            currentIndex = parseInt(line.dataset.index);
+            updateSwiper();
+            resetAutoSlide(); // Reset auto-slide timer on manual interaction
+        });
+    });
+
+    // Swipe functionality with text selection prevention
+    swiper.addEventListener('mousedown', (e) => {
+        e.preventDefault(); // Prevent text selection
+        startX = e.clientX;
+        isDragging = true;
+        resetAutoSlide(); // Reset auto-slide timer on manual interaction
+    });
+
+    swiper.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            e.preventDefault(); // Prevent text selection
+            const diff = e.clientX - startX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    handleInfiniteScroll('prev');
+                } else {
+                    handleInfiniteScroll('next');
+                }
+                isDragging = false;
+            }
+        }
+    });
+
+    swiper.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    swiper.addEventListener('mouseleave', () => {
+        isDragging = false;
+    });
+
+    // Touch support for mobile
+    swiper.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // Prevent text selection
+        startX = e.touches[0].clientX;
+        isDragging = true;
+        resetAutoSlide(); // Reset auto-slide timer on manual interaction
+    });
+
+    swiper.addEventListener('touchmove', (e) => {
+        if (isDragging) {
+            e.preventDefault(); // Prevent text selection
+            const diff = e.touches[0].clientX - startX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    handleInfiniteScroll('prev');
+                } else {
+                    handleInfiniteScroll('next');
+                }
+                isDragging = false;
+            }
+        }
+    });
+
+    swiper.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+
+    // Automatic sliding
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            handleInfiniteScroll('next');
+        }, 5000); // Slide every 5 seconds
+    }
+
+    // Reset auto-slide timer on user interaction
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+
+    // Start auto-sliding on page load
+    startAutoSlide();
+  </script>
+
 
   <!--Mobile Menu Toggle-->
   <script>
@@ -414,5 +640,7 @@
       }
     });
   </script>
-</body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</body> 
 </html>
