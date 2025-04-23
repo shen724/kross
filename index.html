@@ -4,10 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shen</title>
+  <!--Tailwind CDN-->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!--Google Font-->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+  <!--Animate.css CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!--AOS CDN-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <style type="text/tailwindcss">
@@ -25,7 +33,7 @@
       @apply hover:text-gray-300 transition-colors;
     }
     .hero-title{
-      @apply text-white text-4xl md:ml-40 lg:ml-50 md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight max-w-lg
+      @apply text-white text-6xl md:ml-40 lg:ml-50 md:text-7xl lg:text-8xl font-bold leading-tight md:leading-tight
     }
   }
 </style>
@@ -50,7 +58,7 @@
       <a class="nav-links" href="#about">About</a>
       <a class="nav-links" href="#blogs">Blog</a>
       <a class="nav-links" href="#portfolio">Portfolio</a>
-      <a class="nav-links" href="#">Contact</a>
+      <a class="nav-links" href="#contact">Contact</a>
     </div>
   </nav>
   
@@ -72,22 +80,22 @@
       <img src="/assets/bg.png" alt="Background" class="w-full h-full object-cover absolute inset-0">
       
       <!-- Decorative Elements -->
-      <img src="/assets/leaf.png" alt="Leaf" class="w-40 md:w-80 absolute top-20 -right-10 md:-right-40 z-10 opacity-80">
-      <img src="/assets/leaf2.png" alt="Leaf" class="w-16 md:w-24 absolute top-1/4 right-1/2 z-10 hidden md:block">
-      <img src="/assets/leaf3.png" alt="Leaf" class="w-40 md:w-96 absolute top-1/3 -left-10 md:-left-40 z-10 opacity-80">
-      <img src="/assets/leaf5.png" alt="Leaf" class="w-20 md:w-40 absolute bottom-20 -right-5 md:-right-20 z-10">
-      <img src="/assets/leaf6.png" alt="Leaf" class="w-12 md:w-20 absolute bottom-40 right-1/4 z-10 hidden md:block">
-      <img src="/assets/dot.png" alt="Dot" class="w-12 md:w-16 absolute bottom-1/4 left-1/4 z-10 hidden md:block">
-      <img src="/assets/dot2.png" alt="Dot" class="w-16 md:w-24 absolute top-1/3 right-1/3 z-10 hidden md:block">
+      <img src="/assets/leaf.png" alt="Leaf" class="w-40 md:w-80 absolute top-20 -right-10 md:-right-40 z-10 opacity-80 animate__animated animate__slideInRight">
+      <img src="/assets/leaf2.png" alt="Leaf" class="w-16 md:w-24 absolute top-1/4 right-1/2 z-10 hidden md:block animate__animated animate__rotateIn">
+      <img src="/assets/leaf3.png" alt="Leaf" class="w-40 md:w-96 absolute top-1/3 -left-10 md:-left-40 z-10 opacity-80 animate__animated animate__rotateInUpLeft">
+      <img src="/assets/leaf5.png" alt="Leaf" class="w-20 md:w-40 absolute bottom-20 -right-5 md:-right-20 z-10 animate__animated animate__slideInUp">
+      <img src="/assets/leaf6.png" alt="Leaf" class="w-12 md:w-20 absolute bottom-40 right-1/4 z-10 hidden md:block animate__animated animate__slideInUp">
+      <img src="/assets/dot.png" alt="Dot" class="w-12 md:w-16 absolute bottom-1/4 left-1/4 z-10 hidden md:block animate__animated animate__fadeInDown">
+      <img src="/assets/dot2.png" alt="Dot" class="w-16 md:w-24 absolute top-1/3 right-1/3 z-10 hidden md:block animate__animated animate__fadeIn animate__slow">
       
       <!-- Hero Content -->
       <div class="relative z-20 flex flex-col justify-center h-screen px-6 md:px-20">
-        <h1 class="hero-title">
+        <h1 class="hero-title animate__animated animate__slideInLeft">
           Hi! I'm<br>Shen Jeuz<br>UX designer
         </h1>
         
         <!-- Social Media -->
-        <div class="socialmedia">
+        <div class="socialmedia animate__animated animate__backInLeft" style="animation-delay: 0.5s;">
           <a href="#" class="hover:opacity-80 transition-opacity">
             <img src="/assets/fb.png" alt="Facebook" class="w-8 h-8">
           </a>
@@ -100,16 +108,16 @@
         </div>
       </div>
     </div>
-    <img src="/assets/leaf4.png" alt="Leaf" class="w-20 md:w-50 absolute -bottom-20 left-10 md:left-40 z-20">
+    <img src="/assets/leaf4.png" alt="Leaf" class="w-20 md:w-50 absolute -bottom-20 left-10 md:left-40 z-20 animate__animated animate__slideInUp">
   </section>
 
   <!-- Content Section -->
-  <section  id="about" class="py-16 px-6">
+  <section  id="about" class="py-16 px-6" data-aos="slide-up">
     <div class="max-w-4xl mx-auto text-center">
       <p class="text-base md:text-lg mb-8">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia quaerat aliquam, cum aperiam ipsum commodi perspiciatis hic eos dolor accusamus soluta nemo beatae libero fugit quasi dolorum. Ipsa, placeat voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quos temporibus asperiores aperiam et deleniti porro corrupti libero molestias, quod, reprehenderit officiis praesentium labore odio perspiciatis, esse nulla officia fuga.
       </p>
-      <a href="#" class="inline-block text-[#41228E] font-bold hover:underline transition-all">
+      <a href="#" class="inline-block text-[#41228E] font-bold hover:underline transition-all" data-aos="slide-up" data-aos-delay="200">
         KNOW MORE
       </a>
     </div>
@@ -118,7 +126,7 @@
   <!--Skills Section-->
 
   <section class="w-full py-16">
-    <h2 class="font-bold text-3xl md:text-4xl lg:text-5xl text-center mb-10 font-[Montserrat]">Skills</h2>
+    <h2 class="font-[Montserrat] font-extrabold text-3xl md:text-5xl pt-3 md:pt-5 text-center mb-6 md:mb-12" data-aos="fade-up">Skills</h2>
     
     <!-- Skills Grid -->
     <div class="max-w-6xl mx-auto px-4">
@@ -126,7 +134,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         
         <!-- Skill Item 1 -->
-        <div class="flex flex-col items-center transition-transform hover:scale-105">
+        <div class="flex flex-col items-center transition-transform hover:scale-105" data-aos="zoom-in">
           <div class="mb-3 w-30 h-30 flex items-center justify-center">
             <img src="/assets/webdes.png" alt="Web Design" class="w-full h-auto">
           </div>
@@ -134,7 +142,7 @@
         </div>
         
         <!-- Skill Item 2 -->
-        <div class="flex flex-col items-center transition-transform hover:scale-105">
+        <div class="flex flex-col items-center transition-transform hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
           <div class="mb-3 w-30 h-30 flex items-center justify-center">
             <img src="/assets/logodes.png" alt="Logo Design" class="w-full h-auto">
           </div>
@@ -142,7 +150,7 @@
         </div>
         
         <!-- Skill Item 3 -->
-        <div class="flex flex-col items-center transition-transform hover:scale-105">
+        <div class="flex flex-col items-center transition-transform hover:scale-105" data-aos="zoom-in" data-aos-delay="400">
           <div class="mb-3 w-30 h-30 flex items-center justify-center">
             <img src="/assets/afterfx.png" alt="After Effects" class="w-full h-auto">
           </div>
@@ -150,7 +158,7 @@
         </div>
         
         <!-- Skill Item 4 -->
-        <div class="flex flex-col items-center transition-transform hover:scale-105">
+        <div class="flex flex-col items-center transition-transform hover:scale-105" data-aos="zoom-in" data-aos-delay="600">
           <div class="mb-3 w-30 h-30 flex items-center justify-center">
             <img src="/assets/webdev.png" alt="Web Application" class="w-full h-auto">
           </div>
@@ -163,11 +171,11 @@
 
   <!--Experience Section-->
 <div class="py-8 md:py-16 px-4 max-w-6xl mx-auto">
-    <h2 class="font-[Montserrat] font-extrabold text-3xl md:text-5xl pt-3 md:pt-5 text-center mb-6 md:mb-12">Experience</h2>
+    <h2 class="font-[Montserrat] font-extrabold text-3xl md:text-5xl pt-3 md:pt-5 text-center mb-6 md:mb-12" data-aos="fade-up">Experience</h2>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
       <!-- Experience Item 1 -->
-      <div class="flex flex-col items-center text-center p-4 transition-all duration-300 hover:shadow-lg rounded-lg">
+      <div class="flex flex-col items-center text-center p-4 transition-all duration-300 hover:shadow-lg rounded-lg" data-aos="flip-left">
         <div class="w-16 h-16 mb-4 relative">
           <!-- Circle Graph -->
           <svg viewBox="0 0 36 36" class="w-full h-full">
@@ -187,7 +195,7 @@
       </div>
   
       <!-- Experience Item 2 -->
-      <div class="flex flex-col items-center text-center p-4 transition-all duration-300 hover:shadow-lg rounded-lg">
+      <div class="flex flex-col items-center text-center p-4 transition-all duration-300 hover:shadow-lg rounded-lg" data-aos="flip-left" data-aos-delay="200">
         <div class="w-16 h-16 mb-4 relative">
           <!-- Circle Graph -->
           <svg viewBox="0 0 36 36" class="w-full h-full">
@@ -207,7 +215,7 @@
       </div>
   
       <!-- Experience Item 3 -->
-      <div class="flex flex-col items-center text-center p-4 transition-all duration-300 hover:shadow-lg rounded-lg sm:col-span-2 lg:col-span-1">
+      <div class="flex flex-col items-center text-center p-4 transition-all duration-300 hover:shadow-lg rounded-lg sm:col-span-2 lg:col-span-1" data-aos="flip-left" data-aos-delay="400">
         <div class="w-16 h-16 mb-4 relative">
           <!-- Circle Graph -->
           <svg viewBox="0 0 36 36" class="w-full h-full">
@@ -239,7 +247,7 @@
         <h2 class="font-[Montserrat] font-extrabold text-3xl md:text-5xl pt-3 md:pt-5 text-center mb-6 md:mb-12">Education</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- 2016 Entry -->
-          <div class="flex items-start space-x-5">
+          <div class="flex items-start space-x-5" data-aos="fade-right">
             <div class="bg-blue-100 rounded-full p-4">
               <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
@@ -254,7 +262,7 @@
             </div>
           </div>
           <!-- 2004 Entry -->
-          <div class="flex items-start space-x-5">
+          <div class="flex items-start space-x-5" data-aos="fade-left">
             <div class="bg-blue-100 rounded-full p-4">
               <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
@@ -269,7 +277,7 @@
             </div>
           </div>
           <!-- 2000 Entry -->
-          <div class="flex items-start space-x-5">
+          <div class="flex items-start space-x-5" data-aos="fade-right" data-aos-delay="200">
             <div class="bg-blue-100 rounded-full p-4">
               <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
@@ -284,7 +292,7 @@
             </div>
           </div>
           <!-- 1998 Entry -->
-          <div class="flex items-start space-x-5">
+          <div class="flex items-start space-x-5" data-aos="fade-left" data-aos-delay="200">
             <div class="bg-blue-100 rounded-full p-4">
               <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
@@ -305,11 +313,11 @@
 
   <!--Services-->
   <div class="container mx-auto px-4 py-16 max-w-6xl">
-    <h2 class="font-[Montserrat] font-extrabold text-3xl md:text-5xl pt-3 md:pt-5 text-center mb-6 md:mb-12">Services</h1>
+    <h2 class="font-[Montserrat] font-extrabold text-3xl md:text-5xl pt-3 md:pt-5 text-center mb-6 md:mb-12" data-aos="fade-up">Services</h1>
     
     <div class="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-6">
       <!-- UI Design Card -->
-      <div class="flex-1 p-6 text-center border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex-1 p-6 text-center border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow" data-aos="slide-up" >
         <div class="w-16 h-16 mx-auto mb-4 rounded-full border border-purple-600 flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h10a2 2 0 012 2v12a4 4 0 01-4 4H7z" />
@@ -322,7 +330,7 @@
       </div>
       
       <!-- UX Design Card -->
-      <div class="flex-1 p-6 text-center bg-purple-800 text-white rounded-lg shadow-md">
+      <div class="flex-1 p-6 text-center bg-purple-800 text-white rounded-lg shadow-md" data-aos="slide-up" data-aos-delay="100">
         <div class="w-16 h-16 mx-auto mb-4 bg-purple-700 rounded-lg flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -335,7 +343,7 @@
       </div>
       
       <!-- Interaction Design Card -->
-      <div class="flex-1 p-6 text-center border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex-1 p-6 text-center border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow" data-aos="slide-up" data-aos-delay="300">
         <div class="w-16 h-16 mx-auto mb-4 rounded-full border border-purple-600 flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -351,11 +359,11 @@
 
   <!--Portfolio Section-->
   <div id="portfolio" class="max-w-7xl mx-auto">
-    <h2 class="font-[Montserrat] font-extrabold text-3xl md:text-5xl pt-3 md:pt-5 text-center mb-6 md:mb-12">Portfolio</h1>
+    <h2 class="font-[Montserrat] font-extrabold text-3xl md:text-5xl pt-3 md:pt-5 text-center mb-6 md:mb-12" data-aos="fade-up">Portfolio</h1>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 p-10">
         <!-- Project 1 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105" data-aos="flip-right">
             <div class="relative pb-2/3">
                 <img src="/assets/proj1.jpg" alt="Creative Cloud Concept" class="w-full h-48 sm:h-56 md:h-64 object-cover bg-blue-400">
             </div>
@@ -366,7 +374,7 @@
         </div>
         
         <!-- Project 2 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105" data-aos="flip-right" data-aos-delay="100">
             <div class="relative pb-2/3">
                 <img src="/assets/proj2.jpg" alt="Retro Gaming" class="w-full h-48 sm:h-56 md:h-64 object-cover bg-yellow-400">
             </div>
@@ -377,7 +385,7 @@
         </div>
         
         <!-- Project 3 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105" data-aos="flip-right" data-aos-delay="200">
             <div class="relative pb-2/3">
                 <img src="/assets/proj3.jpg" alt="Time Management" class="w-full h-48 sm:h-56 md:h-64 object-cover bg-cyan-400">
             </div>
@@ -388,7 +396,7 @@
         </div>
         
         <!-- Project 4 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"  data-aos="flip-right" data-aos-delay="100">
             <div class="relative pb-2/3">
                 <img src="/assets/proj4.jpg" alt="Gaming Controller" class="w-full h-48 sm:h-56 md:h-64 object-cover bg-green-400">
             </div>
@@ -399,7 +407,7 @@
         </div>
         
         <!-- Project 5 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"  data-aos="flip-right" data-aos-delay="200">
             <div class="relative pb-2/3">
                 <img src="/assets/proj5.jpg" alt="Skateboard Design" class="w-full h-48 sm:h-56 md:h-64 object-cover bg-blue-500">
             </div>
@@ -410,7 +418,7 @@
         </div>
         
         <!-- Project 6 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"  data-aos="flip-right" data-aos-delay="300">
             <div class="relative pb-2/3">
                 <img src="/assets/proj6.jpg" alt="Creative Project" class="w-full h-48 sm:h-56 md:h-64 object-cover bg-purple-400">
             </div>
@@ -425,27 +433,27 @@
 
   <!--Testimonials Section-->
 
-  <section class="bg-purple-900 relative py-16 px-4 flex flex-col items-center text-white">
+  <section class="bg-purple-900 relative py-16 px-4 flex flex-col items-center text-white" data-aos="slide-up">
     <!-- Background Image Layer -->
     <div class="absolute inset-0 bg-cover bg-center bg-[url(/assets/manydots.png)]"></div>
 
     <!-- Floating Elements (placeholders) -->
-    <div class="absolute top-8 left-8">
-        <img src="/assets/leaf2.png" alt="Leaf" class="w-10 md:w-20 opacity-50">
+    <div class="absolute top-8 left-8" >
+        <img src="/assets/leaf2.png" alt="Leaf" class="w-10 md:w-20 opacity-50" data-aos="slide-up" data-aos-delay="300">
     </div>
     <div class="absolute top-16 right-8">
-        <img src="/assets/dot.png" alt="Leaf" class="w-10 md:w-20">
+        <img src="/assets/dot.png" alt="Leaf" class="w-10 md:w-20" data-aos="slide-up" data-aos-delay="380">
     </div>
     <div class="absolute bottom-16 left-8">
-        <img src="/assets/leaf5.png" alt="Leaf" class="w-20 md:w-40">
+        <img src="/assets/leaf5.png" alt="Leaf" class="w-20 md:w-40" data-aos="slide-up" data-aos-delay="250">
     </div>
     <div class="absolute bottom-8 right-8">
-        <img src="/assets/leaf.png" alt="Leaf" class="w-30 md:w-40">
+        <img src="/assets/leaf.png" alt="Leaf" class="w-30 md:w-40" data-aos="slide-up" data-aos-delay="370" >
     </div>
 
     <!-- Testimonials Content -->
     <h2 class="font-bold text-3xl md:text-4xl lg:text-5xl text-center mb-10 font-[Montserrat] relative">Testimonials</h2>
-    <div class="max-w-2xl w-full overflow-hidden relative">
+    <div class="max-w-2xl w-full overflow-hidden relative" data-aos="fade-up" data-aos-delay="200">
         <div id="swiper" class="flex transition-transform duration-300 no-select">
             <!-- Testimonial 1 -->
             <div class="min-w-full text-center flex flex-col">
@@ -505,23 +513,23 @@
   <!--Company Logos-->
   <div class="flex w-full mt-10 mb-5 justify-center">
     <div class="flex flex-col md:flex-row md:flex">
-      <img src="assets/envato.png" alt="Envato" class="w-40 m-5">
-      <img src="assets/sundance.png" alt="Sundance" class="w-40 m-5">
-      <img src="assets/slack.png" alt="Slack" class="w-40 m-5">
-      <img src="assets/airbnb.png" alt="AirBNB" class="w-40 m-5">
-      <img src="assets/forbes.png" alt="Forbes" class="w-40 m-5">
+      <img src="assets/envato.png" alt="Envato" class="w-40 m-5" data-aos="zoom-in">
+      <img src="assets/sundance.png" alt="Sundance" class="w-40 m-5" data-aos="zoom-in" data-aos-delay="100">
+      <img src="assets/slack.png" alt="Slack" class="w-40 m-5" data-aos="zoom-in" data-aos-delay="200">
+      <img src="assets/airbnb.png" alt="AirBNB" class="w-40 m-5" data-aos="zoom-in" data-aos-delay="300">
+      <img src="assets/forbes.png" alt="Forbes" class="w-40 m-5" data-aos="zoom-in" data-aos-delay="400">
     </div>
   </div>
 
   <!--Blogs Section-->
   <div id="blogs" class="max-w-5xl mx-auto py-16 px-4">
     <!-- Blogs Heading -->
-    <h2 class="font-bold text-3xl md:text-4xl lg:text-5xl text-center mb-10 font-[Montserrat]">Blogs</h2>
+    <h2 class="font-bold text-3xl md:text-4xl lg:text-5xl text-center mb-10 font-[Montserrat]" data-aos="fade-up">Blogs</h2>
 
     <!-- Blogs Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Blog Card 1 (Text on Left, Image on Right) -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row col-span-2">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row col-span-2"  data-aos="zoom-in">
             <div class="p-8 md:w-2/5 flex flex-col justify-center">
                 <h3 class="text-2xl font-semibold mb-2">Amazon increase income 1.5 Million</h3>
                 <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -531,7 +539,7 @@
         </div>
 
         <!-- Blog Card 2 (Unchanged) -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
             <img src="assets/icecream.jpg" alt="Blog Image" class="w-full h-64 object-cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold mb-2">Amazon increase income 1.5 Million</h3>
@@ -543,12 +551,12 @@
     </div>
 
     <!-- Contact Info Section with dotted background -->
-    <section class="bg-[url(assets/manydots.png)] py-20">
+    <section class="bg-[url(assets/manydots.png)] py-20" id="contact">
       <div class="container mx-auto px-4">
-          <h1 class="text-5xl font-bold text-center mb-16">Contact Info</h1>
+          <h1 class="text-5xl font-bold text-center mb-16" data-aos="slide-up">Contact Info</h1>
           
           <!-- Contact Form Card -->
-          <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+          <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8" data-aos="slide-up" data-aos-delay="100">
               <h2 class="text-2xl text-center mb-8">Contact Form</h2>
               
               <form>
@@ -739,7 +747,10 @@
       }
     });
   </script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body> 
 </html>
